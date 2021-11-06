@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CSS Grid</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+
+		body{
+			background-color: purple;
+			font-family: sans-serif;
+		}
+
+		#navbar{
+			display: flex;
+			align-items: center;
+			position: sticky;
+			top: 0px;
+		}
+
+		#navbar::before{
+			content: "";
+			background-color: green;
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			z-index: -1;
+			/*opacity: 0.9;*/
+		}
+
+		#logo{
+			margin: 10px 25px;
+		}
+
+		#logo img{
+			height: 50px;
+			width: 150px;
+			margin: 3px 6px;
+			/*filter: invert(100%);*/
+		}
+
+		#navbar ul{
+			display: flex;
+			/*justify-content: space-evenly;*/
+		}
+
+		#navbar ul li{
+			list-style: none;
+			font-size: 1.3rem;
+			margin: 8px 25px;
+			padding: 8px 25px;
+		}
+
+		#navbar ul li a{
+			text-decoration: none;
+			color: lightblue;
+			font-size: 35px;
+			font-weight: 900;
+			font-family: monospace;
+			transition-property: color;
+			transition-duration: 1s;
+			/*transition-timing-function: ease-in-out;*/
+		}
+
+		#navbar ul li a:hover{
+			color: orange;
+
+		}
+
+		.center{
+			display: flex;
+			justify-content: center;
+			color: yellow;
+			margin-top: 25px;
+			margin-bottom: 25px;
+		}
+		.center h1{
+			font-family: fantasy;
+		}
+
+		.game{
+			display: grid;
+			grid-template-columns: 900px 100px;
+		}
+
+		.box{
+			width: 300px;
+			height: 80px;
+			margin: 15px 15px;
+			background-color: orange;
+			color: blue;
+			text-align: center;
+			font-size: 20px;
+			font-family: cursive;
+			font-weight: 800;
+		}
+
+		.box a{
+			text-decoration: none;
+			color: blue;
+		}
+
+		.box a:hover{
+			font-size: 30px;
+		}
+
+		.text{
+			text-align: center;
+			font-size: 25px;
+			color: yellow;
+			margin-bottom: 25px;
+		}
+
+		.text p{
+			font-family: fantasy;
+		}
+	</style>
+</head>
+<body>
+		<nav id="navbar">
+			<div id="logo">
+				<img src="C:\Users\786\Pictures\Saved Pictures\7d34dbd4d6bab6dfb27f0af9d47fedc7.jpg">
+			</div>
+			<ul class="navbar">
+				<li><a href="#">Shooting</a></li>
+				<li><a href="#">Racing</a></li>
+				<li><a href="#">fighting</a></li>
+				<li><a href="#">Cricket</a></li>
+			</ul>
+		</nav>
+
+		<div class="center">
+			<h1>WELCOME TO FRIV.COM</h1>
+		</div>
+
+		<div class="text"><p>Enjoy the best games from all over the world!</p></div>
+
+		<div class="game">
+			<!-- <div class="box">Bubble Shooter</div>
+			<div class="box">Baloon Popper</div>
+			<div class="box">Shaolin Soccer</div>
+			<div class="box">Gunner</div>
+			<div class="box">Boxing Ring</div>
+			<div class="box">Sharp Shooter</div> -->
+
+			<div class="box"><a href="#">Bubble Shooter</a></div>
+			<div class="box"><a href="#">Baloon Popper</a></div>
+			<div class="box"><a href="#">Shaolin Soccer</a></div>
+			<div class="box"><a href="#">Gunner</a></div>
+			<div class="box"><a href="#">Boxing Ring</a></div>
+			<div class="box"><a href="#">Sharp Shooter</a></div>
+			<div class="box"><a href="#">Baloon Popper</a></div>
+			<div class="box"><a href="#">Shaolin Soccer</a></div>
+			<div class="box"><a href="#">Gunner</a></div>
+			<div class="box"><a href="#">Boxing Ring</a></div>
+		</div>
+</body>
+</html>
